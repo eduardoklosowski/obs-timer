@@ -4,12 +4,12 @@ Adiciona um cronômetro para contagem regressiva no OBS.
 
 ## Configuração
 
-No OBS adiciona uma fonte `Navegador` na cena desejada, abrindo o arquivo `timer/timer.html` deste projeto.
+No OBS, adicione uma fonte `Navegador` na cena desejada, com a URL `https://eduardoklosowski.github.io/obs-timer/`.
 
-Por padrão, a contagem será feita em relação ao próximo quarto de hora (15, 30, 45 minutos ou hora completa). Caso deseje informar alguma hora específica, o mesmo pode ser feito adicionado `?t=hh:mm` no final do caminho do arquivo, onde `hh:mm` deve ser substituido pela hora desejada. Exemplo: `timer/timer.html?t=17:00`.
+Por padrão, a contagem será feita em relação ao próximo quarto de hora (15, 30, 45 minutos ou hora completa). Caso deseje informar alguma hora específica, o mesmo pode ser feito adicionado `?t=hh:mm` ao final da URL, onde `hh:mm` deve ser substituido pela hora desejada. Exemplo: `https://eduardoklosowski.github.io/obs-timer/?t=17:00`.
+
+Caso deseje adicionar uma mensagem ao final da contagem regressiva, a mesma pode ser adicionada como com o parêmetro `msg=Mensagem` na URL. Exemplo: `https://eduardoklosowski.github.io/obs-timer/?t=17:00&msg=Iniciando em instantes`.
 
 ## Personalização
 
-A mensagem exibida ao finalizar a contagem pode ser personalizada no arquivo `timer/timer.html` dentro da tag `<div>` com a classe `msg`.
-
-A fonte do cronômetro e da mensagem ao finalizâ-lo podem ser personalizadas no arquivo `timer/timer.css`.
+A fonte, tamanho e cor do cronômetro e da mensagem ao finalizâ-lo podem ser personalizadas no parâmetro `CSS Personalizado`, adicionando as propriedades CSS no id `timer`. Exemplo: `#timer { color: #ffffff; font-size: 90pt; font-weight: bolder; }`.

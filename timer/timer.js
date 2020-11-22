@@ -1,6 +1,13 @@
 window.Timer = {
     finishDate: new Date(),
 
+    updateMsg: function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('msg')) {
+            document.querySelector('#timer .msg').innerHTML = urlParams.get('msg');
+        }
+    },
+
     updateFinishDate: function() {
         var urlParams = new URLSearchParams(window.location.search);
         var date = new Date();
@@ -52,5 +59,6 @@ window.Timer = {
     },
 };
 
+Timer.updateMsg();
 Timer.updateFinishDate();
 Timer.updateTimer();
